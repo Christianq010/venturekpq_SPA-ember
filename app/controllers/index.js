@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
                 email: email
             });
 
-            newSubscription.save().then((response) => {
+            newSubscription.save().then(() => {
                 this.set('responseMessage', `Thank you! We've just saved your email address`);
                 this.set('emailAddress', '');
             });
