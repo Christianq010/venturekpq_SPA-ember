@@ -9,6 +9,7 @@
 /bower_components
 
 .idea
+functions/node_modules
 
 # misc
 /.sass-cache
