@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "venturekpq-webapp-ember"
+    "default": "venturekpq-webapp-ember",
+    "staging": "venturekpq-webapp-ember"
   }
 }
