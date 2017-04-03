@@ -2,15 +2,36 @@
 
 module.exports = function(environment) {
   var ENV = {
+
     modulePrefix: 'ember-sb-agency',
     environment: environment,
     baseURL: '/',
-    locationType: 'hash',
+    locationType: 'auto',
+
+    firebase: {
+      apiKey: "AIzaSyAyQE2ENLThjZ85rpxB5IacdbuZT_Xrarg",
+      authDomain: "venturekpq-webapp-ember.firebaseapp.com",
+      databaseURL: "https://venturekpq-webapp-ember.firebaseio.com",
+      projectId: "venturekpq-webapp-ember",
+      storageBucket: "venturekpq-webapp-ember.appspot.com",
+      messagingSenderId: "474131581392"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+      },
+        EXTEND_PROTOTYPES: {
+            // Prevent Ember Data from overriding Date.parse.
+            Date: false
+        }
     },
 
     APP: {

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+export default Ember.Controller.extend({
     responseMessage: '',
     emailAddress: '',
 
@@ -18,7 +18,7 @@ export default Ember.Component.extend({
             });
 
             newSubscription.save().then((response) => {
-                this.set('responseMessage', `Thank you! We've just saved your email address: ${response.get('emailAddress')}`);
+                this.set('responseMessage', `Thank you! We've just saved your email address`);
                 this.set('emailAddress', '');
             });
         }
