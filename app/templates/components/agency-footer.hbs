@@ -16,9 +16,11 @@
             </div>
             <div class="col-md-4">
                 <ul class="list-inline quicklinks">
-                    <li><a href="#">Privacy Policy</a>
+                    <li>
+                        {{#link-to 'disclaimer' tagName="li"}}<a href="">Disclaimer</a>{{/link-to}}
                     </li>
-                    <li><a href="#">Terms of Use</a>
+                    <li>
+                        {{#link-to 'terms' tagName="li"}}<a href="">Terms of Use</a>{{/link-to}}
                     </li>
                 </ul>
             </div>

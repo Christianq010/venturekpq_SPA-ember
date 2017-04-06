@@ -1,0 +1,32 @@
+<!-- Disclaimer Page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-left">
+            {{#link-to 'index' tagName="div"}}<h4><a href="">Back to Home</a></h4>{{/link-to}}
+        </div>
+    </div>
+</div>
+
+{{ log model }}
+
+<section id="team" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            {{#each model as |disc|}}
+                <h2 class="section-heading">{{disc.heading}}</h2>
+                <hr>
+                <p>{{disc.p1}}</p>
+                <p>{{disc.p2}}</p>
+                <p>{{disc.p3}}</p>
+                <p>{{disc.p4}}</p>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{agency-footer}}
+
+
+{{outlet}}
